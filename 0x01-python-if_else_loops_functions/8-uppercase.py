@@ -7,4 +7,5 @@ for letter in test:
         upper_letter += letter
     else:
         upper_letter += letter
-print("{}".format(str))
+
+print("{}".format(upper_letter))
