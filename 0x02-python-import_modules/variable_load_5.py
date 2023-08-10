@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-a = 2023
+if __name__ == "__main__":
+    a = 2023
