@@ -1,23 +1,15 @@
 #!/usr/bin/python3
-def add_it():
-    a = 10
-    b = 5
+def add(a, b):
     return (a + b)
 
 
-def sub_it():
-    a = 10
-    b = 5
-    return ()
+def sub(a, b):
+    return (a - b)
 
 
-def div_it():
-    a = 10
-    b = 5
+def div(a, b):
     return (a / b)
 
 
-def mul_it():
-    a = 10
-    b = 5
+def mul(a, b):
     return (a * b)
