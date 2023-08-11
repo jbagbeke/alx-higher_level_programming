@@ -5,10 +5,10 @@ if __name__ == "__main__":
     arg_len = len(argv)
     usage = "Usage: ./100-my_calculator.py <a> <operator> <b>"
     operators = "Unknown operator. Available operators: +, -, * and /"
-    if (arg_len - 1) != 3:
+    if (arg_len - 1) < 3:
         print(usage)
         exit(1)
-    
+
     if (arg_len - 1) >= 3:
         opcode = 2
         for opcode in range(opcode, arg_len - 1, 3):
