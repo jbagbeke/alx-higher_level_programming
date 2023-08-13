@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def max_integer(my_list=[]):
     if isinstance(my_list, list):
         list_len = len(my_list)
