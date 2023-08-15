@@ -2,13 +2,13 @@
 #define LISTS_H
 
 /**
- *  * struct listint_s - singly linked list
- *   * @n: integer
- *    * @next: points to the next node
- *     *
- *      * Description: singly linked list node structure
- *       * for project
- *        */
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for project
+ */
 typedef struct listint_s
 {
 	    int n;
@@ -20,5 +20,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
 
 int is_palindrome(listint_t **head);
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #endif /* LISTS_H */
