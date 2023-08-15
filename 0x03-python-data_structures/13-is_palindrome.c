@@ -1,13 +1,13 @@
 #include "lists.h"
-
 /**
- * is_palindrome - Tests if a single linked list is a palindrome
- * @head: Pointer to the first node of the list
- * Return: 1 if is a palindrome, 0 otherwise
+ * is_palindrome - checks if a list is a palindrome
+ * @head: Pointer to first node of the list
+ * Return: 1 if a palindrome, 0 otherwise
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *fast = *head, *slow = *head, *current, *next, *prev = NULL, *prev_list = NULL, *mid_node = NULL, *current1 = *head, *current2;
+	listint_t *fast = *head, *slow = *head, *current, *next, *prev = NULL;
+	listint_t *prev_list = NULL, *mid_node = NULL, *current1 = *head, *current2;
 
 	if (*head == NULL)
 		return (1);
