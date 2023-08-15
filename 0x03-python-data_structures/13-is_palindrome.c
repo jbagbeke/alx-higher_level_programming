@@ -7,7 +7,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *fast = *head, *slow = *head, *current, *next, *prev = NULL;
-	listint_t *prev_list = NULL, *mid_node = NULL, *current1 = *head, *current2;
+	listint_t *prev_list = NULL, *current1 = *head, *current2;
 
 	if (*head == NULL)
 		return (1);
@@ -18,10 +18,8 @@ int is_palindrome(listint_t **head)
 		fast = fast->next->next;
 	}
 	if (fast != NULL)
-	{
-		mid_node = slow;
 		slow = slow->next;
-	}
+
 	prev_list->next = NULL;
 	current = slow;
 	while (current != NULL)
