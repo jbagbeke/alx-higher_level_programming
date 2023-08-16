@@ -9,5 +9,5 @@ def only_diff_elements(set_1, set_2):
                     diff_list.append(idx_1)
                 if idx_2 not in set_1 and idx_2 not in diff_list:
                     diff_list.append(idx_2)
-        
+
         return (set(diff_list))
