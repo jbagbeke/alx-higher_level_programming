@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def update_dictionary(a_dictionary, key, value):
+def simple_delete(a_dictionary, key=""):
     if isinstance(a_dictionary, dict):
-        a_dictionary[key] = value
+        del(a_dictionary[key])
         return (a_dictionary)
