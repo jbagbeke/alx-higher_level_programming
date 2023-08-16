@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def update_dictionary(a_dictionary, key, value):
-    if isinstance(a_dictionary, dict) and value != None:
+    if isinstance(a_dictionary, dict) and value != "":
         if key in a_dictionary:
             a_dictionary[key] = value
         if key not in a_dictionary:
