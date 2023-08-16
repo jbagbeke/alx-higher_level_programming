@@ -7,3 +7,5 @@ def best_score(a_dictionary):
             tmp = int(a_dictionary[val])
             if tmp == values:
                 return (val)
+    else:
+        return (None)
