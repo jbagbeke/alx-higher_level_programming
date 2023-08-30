@@ -20,6 +20,13 @@ class Square:
         else:
             self.__size = size
 
+    def area(self):
+        """
+        Returns area of a square
+        """
+        result = self.__size ** 2
+        return result
+
     def __getattr__(self, name):
         """
         Gets the name of attribute being assessed of the object
@@ -28,10 +35,3 @@ class Square:
             raise AttributeError("'Square' object has no attribute 'size'")
         if name == '__size':
             raise AttributeError("'Square' object has no attribute '__size'")
-
-        def area(self):
-            """
-            Returns area of a square
-            """
-            result = self.__size ** 2
-            return result
