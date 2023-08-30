@@ -8,7 +8,7 @@ class Square:
     """
     Class with an instantiation attribut 'size'.
     """
-    def __init___(self):
+    def square(self):
         """
         Instance definition of the class Square with private attribute 'size'.
         """
