@@ -3,6 +3,7 @@
 Purpose: A class definition with instantiation and assignment of integers
 """
 
+
 class Square:
     """
     Assigns an integer to a private instance attibute
