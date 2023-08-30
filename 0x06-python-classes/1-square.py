@@ -12,4 +12,4 @@ class Square:
         """
         Instance definition of the class Square with private attribute 'size'.
         """
-        self.__size = None
+        __size = None
