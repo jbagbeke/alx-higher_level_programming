@@ -50,7 +50,7 @@ class Square:
         """
         Prints to stdout the square of a character
         """
-        if self.__size != 0:
+        if self.__size != 0 and isinstance(self.__size, int):
             hash_it = '#' * self.__size
             print(hash_it)
         if self.__size == 0:
