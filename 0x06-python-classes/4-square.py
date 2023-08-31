@@ -20,13 +20,6 @@ class Square:
         else:
             self.__size = size
 
-    def area(self):
-        """
-        Returns area of a square
-        """
-        result = self.__size ** 2
-        return result
-
     def size(self):
         """
         Retrieves original value used for calculating the area
@@ -45,3 +38,11 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+
+
+    def area(self):
+        """
+        Returns area of a square
+        """
+        result = self.__size ** 2
+        return result
