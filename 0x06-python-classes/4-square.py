@@ -34,12 +34,3 @@ class Square:
         retrieved = Square.area()
         result = retrieved ** 0.5
         Square(result)
-
-    def __getattr__(self, name):
-        """
-        Gets the name of attribute being assessed of the object
-        """
-        if name == 'size':
-            raise AttributeError("'Square' object has no attribute 'size'")
-        if name == '__size':
-            raise AttributeError("'Square' object has no attribute '__size'")
