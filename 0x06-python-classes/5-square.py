@@ -46,7 +46,6 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
-    @property
     def my_print(self):
         """
         Prints to stdout the square of a character
@@ -54,6 +53,7 @@ class Square:
         if self.__size != 0 and isinstance(self.__size, int):
             hash_it = '#' * self.__size
             print(hash_it)
+            print("")
         if self.__size == 0:
             print("")
 
