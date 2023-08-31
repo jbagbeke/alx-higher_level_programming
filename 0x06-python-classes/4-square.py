@@ -14,14 +14,13 @@ class Square:
 
         Args: An int for assignment
         """
-        self.size = size
+        self.__size = size
 
     def size(self):
         """
         Retrieves original value used for calculating the area
         """
-        retrieved = self.__size
-        return retrieved
+        return self.__size
 
     def self(self, value):
         """
@@ -29,14 +28,13 @@ class Square:
         """
 
         if not isinstance(value, int):
-            raise TypeError("size must be an integer\n")
+            raise TypeError("size must be an integer")
         if value < 0:
-            raise ValueError("size must be >= 0\n")
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     def area(self):
         """
         Returns area of a square
         """
-        result = self.__size ** 2
-        return result
+        return self.__size ** 2
