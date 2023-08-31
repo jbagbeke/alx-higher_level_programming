@@ -31,6 +31,17 @@ class Square:
         """
         Retrieves original value used for calculating the area
         """
-        retrieved = Square.area()
-        result = retrieved ** 0.5
-        Square(result)
+        retrieved = self.__size
+        return retrieved
+
+
+    def self(self, value):
+        """                                               Instantiation with private 'size' attribute, and checks for valid input
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+    
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
