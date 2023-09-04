@@ -7,6 +7,6 @@
 
 class Rectangle:
     """
-    Defines a rectangle
+    Defines a rectangle and attributes
     """
     pass
