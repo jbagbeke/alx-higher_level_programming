@@ -24,17 +24,17 @@ class Rectangle:
         Retrieves and returns area of a rectangle
         Args: None
         """
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         """
         Returns the perimeter of a rectangle
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             self.perimeter = 0
         else:
-            self.perimeter = self.width * self.height
-        return perimeter
+            self.perimeter = self.__width * self.__height
+        return self.perimeter
 
     @property
     def width(self):
