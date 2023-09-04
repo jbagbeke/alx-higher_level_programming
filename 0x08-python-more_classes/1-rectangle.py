@@ -16,12 +16,8 @@ class Rectangle:
         Args 1: An int(width)
         Args 2: An int(height)
         """
-        if width < 0 or height < 0:
-            raise ValueError
-        if not isinstance(width, int) or not isinstance(height, int):
-            raise TypeError
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
