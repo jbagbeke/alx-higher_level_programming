@@ -19,22 +19,22 @@ class Rectangle:
         self.width = width
         self.height = height
 
-        def area(self):
-            """
-            Retrieves and returns area of a rectangle
-            Args: None
-            """
-            return self.width * self.height
+    def area(self):
+        """
+        Retrieves and returns area of a rectangle
+        Args: None
+        """
+        return self.width * self.height
 
-        def perimeter(self):
-            """
-            Returns the perimeter of a rectangle
-            """
-            if self.width == 0 or self.height == 0:
-                self.perimeter = 0
-            else:
-                self.perimeter = self.width * self.height
-            return perimeter
+    def perimeter(self):
+        """
+        Returns the perimeter of a rectangle
+        """
+        if self.width == 0 or self.height == 0:
+            self.perimeter = 0
+        else:
+            self.perimeter = self.width * self.height
+        return perimeter
 
     @property
     def width(self):
