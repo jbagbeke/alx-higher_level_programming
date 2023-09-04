@@ -33,7 +33,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             self.perimeter = 0
         else:
-            self.perimeter = 2 * (self.__width * self.__height)
+            self.perimeter = 2 * (self.__width + self.__height)
         return self.perimeter
 
     @property
