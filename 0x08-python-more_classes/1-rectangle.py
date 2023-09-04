@@ -27,7 +27,7 @@ class Rectangle:
         """
         return self.__width
 
-    @property.setter
+    @width.setter
     def width(self, value):
         """
         Sets the value of the width of a rectangle
@@ -47,7 +47,7 @@ class Rectangle:
         """
         return self.__height
 
-    @property.setter
+    @height.setter
     def height(self, value):
         """
         Sets the value of the height of a rectangle
@@ -58,12 +58,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-
-
-my_rectangle = Rectangle(2, 4)
-print(my_rectangle.__dict__)
-
-my_rectangle.width = 10
-my_rectangle.height = 3
-print(my_rectangle.__dict__)
