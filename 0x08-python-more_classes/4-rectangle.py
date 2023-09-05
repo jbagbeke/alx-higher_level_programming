@@ -95,8 +95,6 @@ class Rectangle:
         """
         Returns string representation of a rectangle
         """
-        if self.__width == 0 or self.__height == 0:
-            return ("")
         repr_str = "Rectangle(" + str(self.__width)
-        repr_str += "," + str(self.__height) + ")"
+        repr_str += ", " + str(self.__height) + ")"
         return repr_str
