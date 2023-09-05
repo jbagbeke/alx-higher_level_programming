@@ -93,8 +93,10 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Returns string with '#' representation of a rectangle using eval()
+        Returns string representation of a rectangle
         """
+        if self.__width == 0 or self.__height == 0:
+            return ("")
         repr_str = "Rectangle(" + str(self.__width)
-        repr_str += "," + str(self.__height) + ")" + "\n"
+        repr_str += "," + str(self.__height) + ")"
         return repr_str
