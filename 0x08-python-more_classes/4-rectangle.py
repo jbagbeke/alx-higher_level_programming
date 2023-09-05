@@ -96,5 +96,5 @@ class Rectangle:
         Returns string with '#' representation of a rectangle using eval()
         """
         repr_str = "Rectangle(" + str(self.__width)
-        repr_str += "," + str(self.__height) + ")"
+        repr_str += "," + str(self.__height) + ")" + "\n"
         return repr_str
