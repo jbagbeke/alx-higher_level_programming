@@ -11,7 +11,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """
@@ -90,10 +90,7 @@ class Rectangle:
         rect_str = ""
         for h in range(self.__height):
             for w in range(self.__width):
-                if isinstance(self.print_symbol, list):
-                    rect_str += str(self.print_symbol)
-                else:
-                    rect_str += self.print_symbol
+                rect_str += str(self.print_symbol)
             if h < self.__height - 1:
                 rect_str += '\n'
         return rect_str
