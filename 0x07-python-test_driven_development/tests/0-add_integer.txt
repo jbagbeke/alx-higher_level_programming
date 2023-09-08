@@ -11,4 +11,8 @@ SyntaxError: invalid syntax
 b must be an integer
 >>> add_integer(dhr)
 a must be an integer
+>>> add_integer()
+Traceback (most recent call last):          
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
 
