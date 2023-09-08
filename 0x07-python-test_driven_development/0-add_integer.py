@@ -16,9 +16,8 @@ def add_integer(a, b=98):
     """
     max_len = 1e-10
     print(len([a, b]))
-    if len([a, b]) not in (1, 2):
-        print("Hellejdhfjf\n")
-        raise TypeError("Invalid number of arguments passed")
+    if a != a or b != b:
+        print("Hellooooo\n")
     if not isinstance(a, int) and isinstance(a, float):
         raise TypeError("a must be an integer")
     if not isinstance(a, int) and isinstance(b, float):
@@ -32,4 +31,4 @@ def add_integer(a, b=98):
     return (a + b)
 
 
-print(add_integer())
+print(add_integer(float("none")))
