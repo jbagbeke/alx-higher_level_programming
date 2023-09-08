@@ -29,6 +29,3 @@ def add_integer(a, b=98):
     if isinstance(b, float):
         b = int(b)
     return (a + b)
-
-
-print(add_integer(float("none")))
