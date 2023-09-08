@@ -1,0 +1,14 @@
+"""
+Example:
+>>> add_integer(1, 2)
+3
+>>> add_integer(, 89)
+...
+SyntaxError: invalid syntax
+>>> add_integer(1)
+99
+>>> add_integer(45, fjf)
+b must be an integer
+>>> add_integer(dhr)
+a must be an integer
+
