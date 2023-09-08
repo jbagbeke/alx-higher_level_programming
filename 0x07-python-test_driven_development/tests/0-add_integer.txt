@@ -1,26 +1,53 @@
 """
 Example:
+>>> add_integer(2.3, 5)
+7
+
+>>> add_integer(2.0, 5.1)
+7
+
+>>> add_integer(5.9, 3.1)
+8
+
 >>> add_integer(1, 2)
 3
+
 >>> add_integer(, 89)
 ...
 SyntaxError: invalid syntax
+
 >>> add_integer(1)
 99
+
 >>> add_integer(45, fjf)
 b must be an integer
+
 >>> add_integer(dhr)
 a must be an integer
+
 >>> add_integer()
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
 >>> add_integer(1, "2")
 Traceback (most recent call last):
 ...
 TypeError: can only concatenate str (not "int") to str
+
 >>> add_integer(float("none"))
 Traceback (most recent call last):
 ...
 ValueError: could not convert string to float: 'none'
+
+>>> add_integer(2, float("inf"))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float("NaN"), float("inf"))
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
 """

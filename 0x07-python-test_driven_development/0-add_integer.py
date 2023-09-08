@@ -15,9 +15,6 @@ def add_integer(a, b=98):
     Returns: Result of summation(Int)
     """
     max_len = 1e-10
-    print(len([a, b]))
-    if a != a or b != b:
-        print("Hellooooo\n")
     if not isinstance(a, int) and isinstance(a, float):
         raise TypeError("a must be an integer")
     if not isinstance(a, int) and isinstance(b, float):
