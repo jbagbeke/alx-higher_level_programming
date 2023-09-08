@@ -1,7 +1,7 @@
 """
 Example:
->>> add_integer(2.3, 5)
-7
+>>> add_integer(2.3, -4.1)
+-2
 
 >>> add_integer(2.0, 5.1)
 7
@@ -45,9 +45,14 @@ Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
 
->>> add_integer(float("NaN"), float("inf"))
+>>> add_integer(float("nan"), float("inf"))
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+>>> add_integer(2.4, "None")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 
 """
