@@ -12,6 +12,9 @@ Example:
 >>> add_integer(1, 2)
 3
 
+>>> add_integer(-5.3, -9.5)
+-14
+
 >>> add_integer(, 89)
 ...
 SyntaxError: invalid syntax
