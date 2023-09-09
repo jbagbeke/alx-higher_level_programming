@@ -29,10 +29,8 @@ def matrix_divided(matrix, div):
         for mat1 in matrix:
             if not isinstance(mat1, list):
                 raise TypeError(err1)
-            for is_int in mat1:
-                if not isinstance(is_int, int):
-                    raise TypeError(err1)
-                if not isinstance(is_int, float):
+            for pint in mat1:
+                if not isinstance(pint, int) and not isinstance(pint, float):
                     raise TypeError(err1)
 
         for i in range(len(matrix)):
