@@ -25,19 +25,19 @@ def matrix_divided(matrix, div):
     if isinstance(matrix, list):
         for mat1 in matrix:
             if not isinstance(mat1, list):
-                t_err = "matrix must be a matrix (list of lists) of integers/floats" 
-                raise TypeError(t_err)
+                err = "matrix must be a matrix (list of lists) of integers/floats" 
+                raise TypeError(err)
             for is_int in mat1:
                 if not isinstance(is_int, int) and not isinstance(is_int, float):
-                    raise TypeError(t_err)
+                    raise TypeError(err)
 
         for i in range(len(matrix)):
             if i + 1 < len(matrix):
                 len1 = len(matrix[i])
                 len2 = len(matrix[i + 1])
                 if len1 != len2:
-                    t_err = "Each row of the matrix must have the same size"
-                    raise TypeError(t_err)
+                    err = "Each row of the matrix must have the same size"
+                    raise TypeError(err)
 
     new_matrix = []
     for mat_rix in matrix:
