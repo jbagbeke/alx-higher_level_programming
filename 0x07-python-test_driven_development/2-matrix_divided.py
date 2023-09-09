@@ -2,7 +2,6 @@
 
 """
 Divides all elements of a matrix
-Returns new matrix
 """
 
 
