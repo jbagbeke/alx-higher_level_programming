@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Divides all elements of a matrix"""
+
+"""
+Divides all elements of a matrix
+Returns new matrix
+"""
 
 
 def matrix_divided(matrix, div):
@@ -13,6 +17,8 @@ def matrix_divided(matrix, div):
     Returns:
         A new matrix with result of division
     """
+    err1 = "matrix must be a matrix (list of lists) of integers/floats"
+    err2 = "Each row of the matrix must have the same size"
 
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
@@ -23,21 +29,19 @@ def matrix_divided(matrix, div):
     if isinstance(matrix, list):
         for mat1 in matrix:
             if not isinstance(mat1, list):
-                err = "matrix must be a matrix (list of lists) of integers/floats" 
-                raise TypeError(err)
+                raise TypeError(err1)
             for is_int in mat1:
                 if not isinstance(is_int, int):
-                    raise TypeError(err)
-                if and not isinstance(is_int, float):
-                    raise TypeError(err)
+                    raise TypeError(err1)
+                if not isinstance(is_int, float):
+                    raise TypeError(err1)
 
         for i in range(len(matrix)):
             if i + 1 < len(matrix):
                 len1 = len(matrix[i])
                 len2 = len(matrix[i + 1])
                 if len1 != len2:
-                    err = "Each row of the matrix must have the same size"
-                    raise TypeError(err)
+                    raise TypeError(err2)
 
     new_matrix = []
     for mat_rix in matrix:
