@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Divides all elements of a matrix
-"""
+"""Divides all elements of a matrix"""
 
 
 def matrix_divided(matrix, div):
@@ -28,7 +26,9 @@ def matrix_divided(matrix, div):
                 err = "matrix must be a matrix (list of lists) of integers/floats" 
                 raise TypeError(err)
             for is_int in mat1:
-                if not isinstance(is_int, int) and not isinstance(is_int, float):
+                if not isinstance(is_int, int):
+                    raise TypeError(err)
+                if and not isinstance(is_int, float):
                     raise TypeError(err)
 
         for i in range(len(matrix)):
