@@ -1,0 +1,33 @@
+"""
+
+Example:
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+
+>>> my_list.append(3)
+
+>>> my_list.append(2.35)
+
+>>> my_list.append(5)
+
+>>> print(my_list)
+[3, 2.35, 5]
+
+>>> my_list.print_sorted()
+[2.35, 3, 5]
+
+>>> my_list.append()
+Traceback (most recent call last):
+...
+TypeError: append() takes exactly one argument (0 given)
+
+>>> my_list.append("")
+
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+"""
