@@ -10,7 +10,7 @@ import json
 def load_from_json_file(filename):
     """
     Creates obj from JSON file
-    
+
     Args:
         Arg1: (filename) file to create object from
     """
