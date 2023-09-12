@@ -3,6 +3,8 @@
 Returns JSON representation of object
 """
 
+import pickle
+
 
 def to_json_string(my_obj):
     """
