@@ -22,7 +22,11 @@ class Student:
         """
         Returns the dictionary description
         """
+        if attrs == None:
+            return self.__dict__
+
+        new_self = {}
         for att in attrs:
-            if att not in self.__dict__:
-                del self.__dict__[att]
-        return (self.__dict__)
+            if att in self.__dict__:
+                new_self[att] = self.__dict__[att]
+        return (new_self)
