@@ -64,14 +64,20 @@ TypeError: '<' not supported between instances of 'str' and 'int'
 [5, 5, 5, 5, 5]
 
 
->>> MyList = __import__('1-my_list').MyList
+case 5: unique number
+
 >>> my_list = MyList()
->>> my_list.append(10)
->>> my_list.append(1)
->>> my_list.append(-2)
->>> my_list.append(24)
->>> my_list.append(-8)
+>>> my_list.append(5)
 >>> my_list.print_sorted()
-[-8, -2, 1, 10, 24]
+[5]
+>>> print(my_list)
+[5]
 >>>
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list2.print_sorted()
+Traceback (most recent call last):
+...
+NameError: name 'my_list2' is not defined
+
 """
