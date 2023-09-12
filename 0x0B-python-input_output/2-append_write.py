@@ -4,7 +4,7 @@ Appends a string to end of text file
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
     Appends a string to end of text file and returns # of chars added
 
