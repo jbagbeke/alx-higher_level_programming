@@ -16,6 +16,6 @@ def append_write(filename="", text=""):
     """
 
     with open(filename, 'a', encoding='UTF-8') as file:
-        char_read = file.append(text)
+        char_read = file.write(text)
 
     return char_read
