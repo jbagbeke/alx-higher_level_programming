@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Checks if an object is an instance of a class
+Checks if an object is an instance of a class or inherited class
 """
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """
-    Checks if obect is instance of class a_class
+    Checks if object is instance of class a_class or inherited class
 
     Args:
         Arg1: (obj) object in consideration
