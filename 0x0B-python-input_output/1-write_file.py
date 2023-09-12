@@ -6,7 +6,7 @@ Writes a string to text file
 
 def write_file(filename="", text=""):
     """
-    Writes a file to a text file and returns # of chars written
+    Writes a string to a text file and returns # of chars written
 
     Args:
         Arg1: (filename) file to store string
