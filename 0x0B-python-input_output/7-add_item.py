@@ -15,6 +15,5 @@ except FileNotFoundError:
     jba_list = []
     with open("add_item.json", "w", encoding="UTF-8") as file:
         json.dump(jba_list, file)
-for i in range(len(sys.argv) - 1):
-    my_list.append(sys.argv[i + 1])
+my_list.extend(sys.argv[1:])
 save_to_json_file(my_list, "add_item.json")
