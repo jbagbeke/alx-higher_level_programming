@@ -16,5 +16,5 @@ def save_to_json_file(my_obj, filename):
         Arg2: File to store object rep in JSON
     """
 
-    with open(filename, "a", encoding="UTF-8") as file:
+    with open(filename, "w", encoding="UTF-8") as file:
         json.dump(my_obj, file)
