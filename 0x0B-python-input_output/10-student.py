@@ -22,7 +22,7 @@ class Student:
         """
         Returns the dictionary description
         """
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
 
         new_self = {}
