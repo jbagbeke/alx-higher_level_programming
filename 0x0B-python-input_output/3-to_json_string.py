@@ -3,7 +3,7 @@
 Returns JSON representation of object
 """
 
-import pickle
+import json
 
 
 def to_json_string(my_obj):
@@ -16,4 +16,4 @@ def to_json_string(my_obj):
     Return: JSON rep of my_obj
     """
 
-    return (pickle.dumps(my_obj))
+    return (json.dumps(my_obj))
