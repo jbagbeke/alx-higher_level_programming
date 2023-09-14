@@ -76,10 +76,10 @@ ValueError: 500 must be greater than 0
 >>>
 
 >>> base = BaseGeometry()
->>> base.integer_validator("500", "53")
+>>> base.integer_validator("age", "53")
 Traceback (most recent call last):
 ...
-TypeError: 500 must be an integer
+TypeError: age must be an integer
 >>>
 
 >>> base = BaseGeometry()
@@ -87,10 +87,10 @@ TypeError: 500 must be an integer
 >>>
 
 >>> base = BaseGeometry()
->>> base.integer_validator("500", {"Name": "John"})
+>>> base.integer_validator("age", {"Name": "John"})
 Traceback (most recent call last):
 ...
-TypeError: 500 must be an integer
+TypeError: age must be an integer
 >>>
 
 >>> base = BaseGeometry()
@@ -117,7 +117,7 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 >>> base = BaseGeometry()
 >>> base.integer_validator("John", 3.454)
 Traceback (most recent call last):
-...
+....
 TypeError: John must be an integer
 >>>
 
