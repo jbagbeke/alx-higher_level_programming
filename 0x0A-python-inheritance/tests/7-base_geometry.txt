@@ -30,6 +30,10 @@ TypeError: None must be an integer
 >>>
 
 >>> base = BaseGeometry()
+>>> base.integer_validator(None, 656)
+>>>
+
+>>> base = BaseGeometry()
 >>> base.area()
 Traceback (most recent call last):
 ...
