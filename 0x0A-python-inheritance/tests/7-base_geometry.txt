@@ -4,6 +4,30 @@ Example:
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+>>> base = BaseGeometry()
+base.integer_validator("John", 0)
+Traceback (most recent call last):
+...
+ValueError: 0 must be greater than 0
+>>>
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("John", 20)
+>>>
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("John", (2, 4))
+Traceback (most recent call last):
+...
+TypeError: (2, 4) must be an integer
+>>>
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("John", None)
+Traceback (most recent call last):
+...
+TypeError: None must be an integer
+>>>
 
 >>> base = BaseGeometry()
 >>> base.area()
