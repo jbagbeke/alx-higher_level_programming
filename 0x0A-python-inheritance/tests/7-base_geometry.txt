@@ -8,7 +8,7 @@ Example:
 >>> base.integer_validator("John", 0)
 Traceback (most recent call last):
 ...
-ValueError: 0 must be greater than 0
+ValueError: John must be greater than 0
 >>>
 
 >>> base = BaseGeometry()
@@ -19,14 +19,14 @@ ValueError: 0 must be greater than 0
 >>> base.integer_validator("John", (2, 4))
 Traceback (most recent call last):
 ...
-TypeError: (2, 4) must be an integer
+TypeError: John must be an integer
 >>>
 
 >>> base = BaseGeometry()
 >>> base.integer_validator("John", None)
 Traceback (most recent call last):
 ...
-TypeError: None must be an integer
+TypeError: John must be an integer
 >>>
 
 >>> base = BaseGeometry()
@@ -65,21 +65,21 @@ TypeError: integer_validator() takes 3 positional arguments but 4 were given
 >>> base.integer_validator("Jude", [1, 2])
 Traceback (most recent call last):
 ...
-TypeError: [1, 2] must be an integer
+TypeError: Jude must be an integer
 >>>
 
 >>> base = BaseGeometry()
 >>> base.integer_validator("500", -343)
 Traceback (most recent call last):
 ...
-ValueError: -343 must be greater than 0
+ValueError: 500 must be greater than 0
 >>>
 
 >>> base = BaseGeometry()
 >>> base.integer_validator("500", "53")
 Traceback (most recent call last):
 ...
-TypeError: 53 must be an integer
+TypeError: 500 must be an integer
 >>>
 
 >>> base = BaseGeometry()
@@ -90,7 +90,7 @@ TypeError: 53 must be an integer
 >>> base.integer_validator("500", {"Name": "John"})
 Traceback (most recent call last):
 ...
-TypeError: {'Name': 'John'} must be an integer
+TypeError: 500 must be an integer
 >>>
 
 >>> base = BaseGeometry()
@@ -118,7 +118,7 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 >>> base.integer_validator("John", 3.454)
 Traceback (most recent call last):
 ...
-TypeError: 3.454 must be an integer
+TypeError: John must be an integer
 >>>
 
 
