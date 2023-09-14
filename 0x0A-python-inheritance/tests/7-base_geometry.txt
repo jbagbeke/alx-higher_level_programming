@@ -121,5 +121,19 @@ Traceback (most recent call last):
 TypeError: John must be an integer
 >>>
 
+>>> base = BaseGeometry()
+>>> base.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+>>>
+
+>>> base = BaseGeometry()
+>>> base.integer_validator("John", True)
+Traceback (most recent call last):
+...
+TypeError: John must be an integer
+>>>
+
 
 """
