@@ -22,20 +22,17 @@ class BaseGeometry:
         """
 
         if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(value))
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(value))
-
-class Rectangle(BaseGeometry):
-    """
-    Instantiation with width and height
-    """
+            raise ValueError("{} must be greater than 0".format(name))
 
     def __init__(self, width, height):
-        self.__width = 0
-        self.__height = 0
-        super.__init__()
+        """
+        Instantiation with width and height
+        """
+
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+
         self.__width = width
         self.__height = height
