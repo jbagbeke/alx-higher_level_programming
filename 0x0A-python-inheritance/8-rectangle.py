@@ -26,6 +26,7 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     Class that inherits from BaseGeometry
@@ -38,11 +39,7 @@ class Rectangle(BaseGeometry):
 
         super().__init__()
         self.integer_validator("width", width)
-        self.integer_validator("height", height)
-
         self.__width = width
+
+        self.integer_validator("height", height)
         self.__height = height
-
-
-
-print(issubclass(Rectangle, BaseGeometry))
