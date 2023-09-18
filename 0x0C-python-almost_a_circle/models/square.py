@@ -34,7 +34,7 @@ class Square(Rectangle):
         Retrieves value of size att
         """
 
-        return self._Rectangle__width
+        return self.width
 
     @size.setter
     def size(self, size):
@@ -46,8 +46,8 @@ class Square(Rectangle):
             raise TypeError("width must be an integer")
         if size <= 0:
             raise ValueError("width must be > than 0")
-        self._Rectangle__width = size
-        self._Rectangle__height = size
+        self.width = size
+        self.height = size
 
     def to_dictionary(self):
         """
