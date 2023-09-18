@@ -19,7 +19,7 @@ class Base:
             Arg1: (id) An int representing the id of the instance/object
         """
 
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
