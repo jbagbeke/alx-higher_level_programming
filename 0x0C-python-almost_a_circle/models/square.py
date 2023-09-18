@@ -42,10 +42,6 @@ class Square(Rectangle):
         Sets width and height of a rectangle to size
         """
 
-        if not isinstance(size, int):
-            raise TypeError("width must be an integer")
-        if size <= 0:
-            raise ValueError("width must be > than 0")
         self.width = size
         self.height = size
 
