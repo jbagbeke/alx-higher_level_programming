@@ -3,7 +3,7 @@
 Unittest for module base.py
 """
 import unittest
-from ...models.base import Base
+from models.base import Base
 
 
 class BaseTest(unittest.TestCase):
@@ -17,4 +17,4 @@ class BaseTest(unittest.TestCase):
         """
 
         b1 = Base()
-        self.assertEqual(print(b1.id), 1)
+        self.assertEqual(b1.id, 1)

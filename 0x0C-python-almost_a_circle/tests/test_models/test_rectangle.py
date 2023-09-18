@@ -3,18 +3,18 @@
 Unittest for module base.py
 """
 import unittest
-from ...models.base import Base
+from models.rectangle import Rectangle
 
 
-class BaseTest(unittest.TestCase):
+class RectangleTest(unittest.TestCase):
     """
     Unittest for Base class
     """
 
-    def test_None(self):
+    def test_all_args(self):
         """
         Passing None Argument to Base class
         """
 
-        b1 = Base()
-        self.assertEqual(print(b1.id), 1)
+        r1 = Rectangle(3, 2)
+        self.assertEqual(r1.area(), 6)
