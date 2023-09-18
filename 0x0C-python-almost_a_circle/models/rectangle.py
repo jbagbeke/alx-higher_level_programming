@@ -13,6 +13,13 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Class constructor that initiates private variables
+
+         Args:
+            Arg1: (width) width of the new Rectangle.
+            Arg2: (height) height of new Rectangle.
+            Arg3: (x) x coordinate of new Rectangle.
+            Arg4: (y) y coordinate of new Rectangle.
+            Arg5: (id)identity of the new Rectangle.
         """
 
         self.__width = width
