@@ -119,6 +119,9 @@ class Rectangle(Base):
         Prints in stdout the Rectangle instance with the char #
         """
 
+        if self.__width == 0 or self.__height == 0:
+            print("")
+            return
         for y_d in range(self.__y):
             print("")
 
