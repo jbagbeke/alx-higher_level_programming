@@ -43,9 +43,9 @@ class Base:
         Writes the JSON string representation of list_objs to a file
         """
 
-        filename = cls.__name__.json
+        filename = cls.__name__ + 'json'
         with open(filename, "w", encoding="UTF-8") as file:
             if list_objs is None:
-                json.dump([], file)
+                json.dump("[]", file)
             elif list_objs is not None:
-                json.dump(cls.to_json_string(list_objs), file)
+                json.dump(Base.to_json_string(list_objs), file)
