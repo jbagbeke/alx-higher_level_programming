@@ -2,6 +2,7 @@
 """
 A class module that wil be the base of other classes
 """
+from models.rectangle import Rectangle
 import json
 
 
@@ -64,3 +65,17 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Returns an instance with all attributes already set
+        """
+
+        if dictionary is not None and len(dictionary) != 0:
+            if cls.__name__ == 'Square':
+                rect = cls(2, 2)
+            else:
+                rect_n = cls(2)
+            rect_n.update(**dictionary)
+            return rect_n
