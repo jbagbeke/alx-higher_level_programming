@@ -67,14 +67,15 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """
-        Returns an instance with all attributes already set
-        """
+        """Return a class instantied from a dictionary of attributes.
 
-        if dictionary is not None and dictionary != {}:
-            if cls.__name__ == 'Rectangle':
-                rect = cls(1, 1)
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize.
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
             else:
-                rect = cls(1)
-            rect.update(**dictionary)
-            return rect_n
+                new = cls(1)
+            new.update(**dictionary)
+            return new
