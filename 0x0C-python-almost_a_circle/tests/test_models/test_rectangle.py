@@ -37,3 +37,20 @@ class RectangleTest(unittest.TestCase):
     def test_all_args(self):
         r1 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(r1.id, 12)
+
+    def test_height_int(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            r = Rectangle(10, "2")
+
+    def test_x_int(self):
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            r = Rectangle(10, 2, {})
+
+    def test_width_less(self):
+        with self.assertRaisesRegex(ValueError, "width must be >= 0"):
+            r = Rectangle(-10, 3)
+
+
+    def test_y_less(self):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            r = Rectangle(10, 2, 3, -1)
