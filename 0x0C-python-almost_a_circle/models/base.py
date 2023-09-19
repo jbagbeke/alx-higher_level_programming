@@ -71,7 +71,7 @@ class Base:
         Returns an instance with all attributes already set
         """
 
-        if dictionary is not None and len(dictionary) != 0:
+        if dictionary is not None and dictionary != {}:
             if cls.__name__ == 'Rectangle':
                 rect = cls(2, 2)
             else:
