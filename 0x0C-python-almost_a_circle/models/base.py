@@ -53,3 +53,14 @@ class Base:
                     tmp_obj = obj.to_dictionary()
                     my_list.append(tmp_obj)
                 file.write(Base.to_json_string(my_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Returns the list of the JSON string representation json_string
+        """
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+             return json.loads(json_string)
