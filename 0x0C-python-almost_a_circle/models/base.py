@@ -73,8 +73,8 @@ class Base:
 
         if dictionary is not None and dictionary != {}:
             if cls.__name__ == 'Rectangle':
-                rect = cls(2, 2)
+                rect = cls(1, 1)
             else:
-                rect = cls(2)
+                rect = cls(1)
             rect.update(**dictionary)
             return rect_n
