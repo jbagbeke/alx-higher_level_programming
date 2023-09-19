@@ -44,8 +44,8 @@ class Base:
         """
 
         filename = cls.__name__
-       with open(filename, "w", encoding="UTF-8") as file:
-           if list_objs is None:
-               json.dump(file, [])
+        with open(filename, "w", encoding="UTF-8") as file:
+            if list_objs is None:
+                json.dump(file, [])
             elif list_objs is not None:
                 json.dump(file, cls.to_json_string(list_objs))
