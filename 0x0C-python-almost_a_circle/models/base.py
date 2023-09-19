@@ -2,7 +2,6 @@
 """
 A class module that wil be the base of other classes
 """
-from models.rectangle import Rectangle
 import json
 
 
