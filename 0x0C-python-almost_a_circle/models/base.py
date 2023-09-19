@@ -52,4 +52,4 @@ class Base:
                 for obj in list_objs:
                     tmp_obj = obj.to_dictionary()
                     my_list.append(tmp_obj)
-                json.dump(Base.to_json_string(my_list), file)
+                file.write(Base.to_json_string(my_list))
