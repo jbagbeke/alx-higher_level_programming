@@ -165,24 +165,23 @@ class Rectangle(Base):
                 elif index == 4:
                     self.y = arg
                 index += 1
-        else:
-            if kwargs is not None and len(kwargs) > 0:
-                for key, value in kwargs.items():
-                    if key == 'id':
-                        if value is not None:
-                            self.id = value
-                        else:
-                            w = self.width
-                            h = self.height
-                            self.__init__(w, h, self.x, self.y)
-                    if key == 'width':
-                        self.width = value
-                    if key == 'height':
-                        self.height = value
-                    if key == 'x':
-                        self.x = value
-                    if key == 'y':
-                        self.y = value
+        elif kwargs is not None and len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    if value is not None:
+                        self.id = value
+                    else:
+                        w = self.width
+                        h = self.height
+                        self.__init__(w, h, self.x, self.y)
+                if key == 'width':
+                    self.width = value
+                if key == 'height':
+                    self.height = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
 
     def to_dictionary(self):
         """
