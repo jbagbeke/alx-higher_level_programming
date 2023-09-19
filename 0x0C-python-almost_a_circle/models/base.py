@@ -48,4 +48,10 @@ class Base:
             if list_objs is None:
                 json.dump("[]", file)
             elif list_objs is not None:
-                json.dump(Base.to_json_string(list_objs), file)
+
+                my_list = []
+                for obj in list_objs:
+                    tmp_obj = obj.to_dictionary()
+                    my_list.append(tmp_obj)
+
+                json.dump(Base.to_json_string(my_list), file)
