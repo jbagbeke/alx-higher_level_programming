@@ -72,9 +72,9 @@ class Base:
         """
 
         if dictionary is not None and len(dictionary) != 0:
-            if cls.__name__ == 'Square':
+            if cls.__name__ == 'Rectangle':
                 rect = cls(2, 2)
             else:
-                rect_n = cls(2)
-            rect_n.update(**dictionary)
+                rect = cls(2)
+            rect.update(**dictionary)
             return rect_n
