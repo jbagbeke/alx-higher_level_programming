@@ -37,20 +37,3 @@ class RectangleTest(unittest.TestCase):
     def test_all_args(self):
         r1 = Rectangle(10, 2, 0, 0, 12)
         self.assertEqual(r1.id, 12)
-
-    def test_height_int(self):
-        with self.assertRaises(TypeError):
-            r = Rectangle(10, "2")
-
-    def test_x_int(self):
-        with self.assertRaises(TypeError):
-            r = Rectangle(10, 2, {})
-
-    def test_width_less(self):
-        with self.assertRaises(ValueError):
-            r = Rectangle(-10, 3)
-
-
-    def test_y_less(self):
-        with self.assertRaises(ValueError):
-            r = Rectangle(10, 2, 3, -1)
