@@ -46,7 +46,7 @@ class Base:
         filename = cls.__name__ + 'json'
         with open(filename, "w", encoding="UTF-8") as file:
             if list_objs is None:
-                json.dump("[]", file)
+                file.write("[]")
             elif list_objs is not None:
 
                 my_list = []
@@ -54,4 +54,4 @@ class Base:
                     tmp_obj = obj.to_dictionary()
                     my_list.append(tmp_obj)
 
-                json.dump(Base.to_json_string(my_list), file)
+                file.write(Base.to_json_string(my_list))
