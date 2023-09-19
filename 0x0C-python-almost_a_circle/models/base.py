@@ -4,6 +4,7 @@ A class module that wil be the base of other classes
 """
 import json
 
+
 class Base:
     """
     Base class of other classes in this project
