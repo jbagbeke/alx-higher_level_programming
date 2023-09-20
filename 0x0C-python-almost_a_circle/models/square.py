@@ -59,3 +59,43 @@ class Square(Rectangle):
         my_dict['size'] = self.width
         my_dict['y'] = self.y
         return my_dict
+
+    def update(self, *args, **kwargs):
+        """
+        Update the class Square to assign attributes
+        """
+
+        if args is not None and len(args) > 0:
+            index = 0
+            for arg in args:
+                if index == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                if index == 1:
+                    self.width = arg
+                elif index == 2:
+                    self.height = arg
+                elif index == 3:
+                    self.x = arg
+                elif index == 4:
+                    self.y = arg
+                index += 1
+        elif kwargs is not None and len(kwargs) > 0:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    if value is not None:
+                        self.id = value
+                    else:
+                        w = self.width
+                        h = self.height
+                        self.__init__(w, h, self.x, self.y)
+                if key == 'width':
+                    self.width = value
+                if key == 'height':
+                    self.height = value
+                if key == 'x':
+                    self.x = value
+                if key == 'y':
+                    self.y = value
