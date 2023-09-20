@@ -70,16 +70,14 @@ class Square(Rectangle):
             for arg in args:
                 if index == 0:
                     if arg is None:
-                        self.__init__(self.width, self.height, self.x, self.y)
+                        self.__init__(self.size, self.x, self.y)
                     else:
                         self.id = arg
                 if index == 1:
-                    self.width = arg
+                    self.size = arg
                 elif index == 2:
-                    self.height = arg
-                elif index == 3:
                     self.x = arg
-                elif index == 4:
+                elif index == 3:
                     self.y = arg
                 index += 1
         elif kwargs is not None and len(kwargs) > 0:
@@ -88,13 +86,9 @@ class Square(Rectangle):
                     if value is not None:
                         self.id = value
                     else:
-                        w = self.width
-                        h = self.height
-                        self.__init__(w, h, self.x, self.y)
-                if key == 'width':
-                    self.width = value
-                if key == 'height':
-                    self.height = value
+                        self.__init__(self.size, self.x, self.y)
+                if key == 'size':
+                    self.size = value
                 if key == 'x':
                     self.x = value
                 if key == 'y':
