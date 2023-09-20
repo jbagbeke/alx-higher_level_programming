@@ -73,7 +73,7 @@ class Base:
 
         if dictionary is not None and len(dictionary) != 0:
             if cls.__name__ == 'Square':
-                rect = cls(2, 3)
+                rect = cls(2)
             else:
                 rect = cls(2, 5)
             rect.update(**dictionary)
