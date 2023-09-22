@@ -96,6 +96,6 @@ class Base:
                     file_read = file.read()
                     read_list = Base.from_json_string(file_read)
                     Base.create()
+                return read_list
             except OSError:
                 return []
-            return read_list
