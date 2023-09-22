@@ -142,7 +142,7 @@ class Base:
 
             for row in csv_file:
                 for key, val in row.items():
-                    list_objs.append(dict(key, int(val)))
+                    list_objs.append(dict([key, int(val)]))
             for objs in list_objs:
                 obj = cls.create(**objs)
                 list_ret.append(obj)
