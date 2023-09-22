@@ -91,8 +91,11 @@ class Base:
         if not os.path.isfile(filepath):
             return []
         else:
+            if len(filepath) == 0:
+                return []
+
             with fopen(filepath, "r", encoding="UTF-8") as file:
                 file_read = file.read()
                 read_list = Base.from_json_string(file_read)
                 instances = Base.create(read_list)
-            return instances
+            return read_list
