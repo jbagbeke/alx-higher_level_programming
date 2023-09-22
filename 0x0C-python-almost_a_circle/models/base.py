@@ -91,8 +91,11 @@ class Base:
         if not os.path.isfile(filepath):
             return []
         else:
-            with open(filepath, "r", encoding="UTF-8") as file:
-                file_read = file.read()
-                read_list = Base.from_json_string(file_read)
-                Base.create()
+            try:
+                with open(filepath, "r", encoding="UTF-8") as file:
+                    file_read = file.read()
+                    read_list = Base.from_json_string(file_read)
+                    Base.create()
+            except OSError:
+                return []
             return read_list
