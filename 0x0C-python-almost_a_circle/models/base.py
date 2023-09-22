@@ -99,8 +99,8 @@ class Base:
                     
                     file_dict = []
                     for att in read_list:
-                        rect = cls.create(att)
-                        file_dict.append(**rect)
+                        rect = cls.create(**att)
+                        file_dict.append(rect)
                     return (file_dict)
                 else:
                     return []
