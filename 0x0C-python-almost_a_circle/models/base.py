@@ -93,9 +93,10 @@ class Base:
         else:
             with open(filepath, "r", encoding="UTF-8") as file:
                 file_read = file.read()
-                
+
                 if file_read:
                     read_list = Base.from_json_string(file_read)
-                    return (Base.create(read_list))
+                    Base.create()
+                    return (read_list)
                 else:
                     return []
