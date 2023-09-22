@@ -96,7 +96,11 @@ class Base:
 
                 if file_read:
                     read_list = Base.from_json_string(file_read)
-                    Base.create()
-                    return (read_list)
+                    
+                    file_dict = []
+                    for att in read_list:
+                        rect = cls.create(att)
+                        file_dict.append(rect)
+                    return (file_dict)
                 else:
                     return []
