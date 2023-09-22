@@ -93,14 +93,10 @@ class Base:
         else:
             with open(filepath, "r", encoding="UTF-8") as file:
                 file_read = file.read()
+                read_list = Base.from_json_string(file_read)
 
-                if file_read:
-                    read_list = Base.from_json_string(file_read)
-
-                    file_dict = []
-                    for att in read_list:
-                        rect = cls.create(**att)
-                        file_dict.append(rect)
-                    return (file_dict)
-                else:
-                    return []
+                file_dict = []
+                for att in read_list:
+                    rect = cls.create(**att)
+                    file_dict.append(rect)
+                return (file_dict)
