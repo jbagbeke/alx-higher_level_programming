@@ -93,6 +93,6 @@ class Base:
         else:
             with fopen(filepath, "r", encoding="UTF-8") as file:
                 file_read = file.read()
-                read_list = cls.from_json_string(file_read)
-                instances = cls.create(read_list)
-                return list(read_list)
+                read_list = Base.from_json_string(file_read)
+                instances = Base.create(read_list)
+            return read_list
