@@ -134,6 +134,5 @@ class Base:
             csv_file = csv.DictReader(file)
 
             for row in csv_file:
-                obj = cls.create(**row)
-                list_objs.append(obj)
+                list_objs.append(row)
         return list_objs
