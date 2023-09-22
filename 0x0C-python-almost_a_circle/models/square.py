@@ -2,7 +2,7 @@
 """
 A  class Square that inherits from Rectangle
 """
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):

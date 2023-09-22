@@ -122,7 +122,7 @@ class Base:
                 csv_file = csv.DictWriter(file, fieldnames=header)
                 csv_file.writeheader()
                 for row in list_objs:
-                    csv_file.writerow(row)
+                    csv_file.writerow(row.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
@@ -131,7 +131,7 @@ class Base:
         """
 
         filename = cls.__name__ + ".csv"
-        
+
         if not os.path.isfile(filename):
             return []
 
