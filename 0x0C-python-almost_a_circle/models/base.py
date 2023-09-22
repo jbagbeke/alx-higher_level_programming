@@ -141,7 +141,8 @@ class Base:
             csv_file = csv.DictReader(file)
 
             for row in csv_file:
-                list_objs.append(row)
+                for key, val in row.items():
+                    list_objs.append(dict(key, int(val)))
             for objs in list_objs:
                 obj = cls.create(**objs)
                 list_ret.append(obj)
