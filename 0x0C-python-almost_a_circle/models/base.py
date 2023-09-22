@@ -3,6 +3,7 @@
 A class module that wil be the base of other classes
 """
 import json
+import os
 
 
 class Base:
@@ -78,3 +79,20 @@ class Base:
                 rect = cls(2, 5)
             rect.update(**dictionary)
             return rect
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns a list of instances
+        """
+
+        filepath = cls.__name__ + ".json"
+
+        if not os.path.isfile(filepath):
+            return []
+        else:
+            with fopen(filepath, "r", encoding="UTF-8") as file:
+                file_read = file.read()
+                read_list = cls.from_json_string(file_read)
+                cls.create(read_list)
+            return read_list
