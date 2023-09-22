@@ -116,10 +116,13 @@ class Base:
             header = ["id", "size", "x", "y"]
 
         with open(filename, mode="w", newline="") as file:
-            csv_file = csv.DictWriter(file, fieldnames=header)
-            csv_file.writeheader()
-            for row in list_objs:
-                csv_file.writerow(row)
+            if list_objs is None or len(list_objs) == 0:
+                file.write("[]")
+            else:
+                csv_file = csv.DictWriter(file, fieldnames=header)
+                csv_file.writeheader()
+                for row in list_objs:
+                    csv_file.writerow(row)
 
     @classmethod
     def load_from_file_csv(cls):
@@ -128,8 +131,11 @@ class Base:
         """
 
         filename = cls.__name__ + ".csv"
-        list_objs = []
+        
+        if not os.path.isfile(filename):
+            return []
 
+        list_objs = []
         with open(filename, mode="r") as file:
             csv_file = csv.DictReader(file)
 
