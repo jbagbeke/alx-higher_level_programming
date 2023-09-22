@@ -136,10 +136,13 @@ class Base:
             return []
 
         list_objs = []
+        list_ret = []
         with open(filename, mode="r") as file:
             csv_file = csv.DictReader(file)
 
             for row in csv_file:
-                obj = cls.create(**row)
-                list_objs.append(obj)
-        return list_objs
+                list_objs.append(row)
+            for objs in list_objs:
+                obj = cls.create(**objs)
+                list_ret.append(obj)
+        return list_ret
