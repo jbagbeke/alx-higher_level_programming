@@ -100,3 +100,38 @@ class Base:
                     rect = cls.create(**att)
                     file_dict.append(rect)
                 return (file_dict)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Serializes objects using COMMA SEPARATED VALUES(CSV)
+        """
+
+        filename = cls.__name__ + ".csv"
+
+        if cls.__name__ == "Rectangle":
+            header = ["id", "width", "height", "x", "y"]
+        elif cls.__name__ == "Square":
+            header = ["id", "size", "x", "y"]
+
+        with open(filename, mode="w", newline="") as file:
+            csv_file = csv.DictWriter(file, fieldnames=header)
+            csv_file.writeheader()
+            for row in list_objs:
+                csv_file.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        deserializes objects from files with COMMA SEPARATED VALUES(CSV)
+        """
+
+        filename = cls.__name__ + ".csv"
+        list_objs = []
+
+        with open(filename, mode="r") as file:
+            csv_file = csv.DictReader(file)
+
+            for row in csv_file:
+                list_objs.append(row)
+        return list_objs
