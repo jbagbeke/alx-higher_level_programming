@@ -95,4 +95,4 @@ class Base:
                 file_read = file.read()
                 read_list = Base.from_json_string(file_read)
                 instances = Base.create(read_list)
-            return read_list
+            return instances
