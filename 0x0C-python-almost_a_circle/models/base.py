@@ -96,6 +96,6 @@ class Base:
                 
                 if file_read:
                     read_list = Base.from_json_string(file_read)
-                    return (Base.create())
+                    return (Base.create(read_list))
                 else:
                     return []
