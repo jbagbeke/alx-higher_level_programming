@@ -122,27 +122,24 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """
-        deserializes objects from files with COMMA SEPARATED VALUES(CSV)
-        """
+        """Return a list of classes instantiated from a CSV file.
 
+        Reads from `<cls.__name__>.csv`.
+
+        Returns:
+            If the file does not exist - an empty list.
+            Otherwise - a list of instantiated classes.
+        """
         filename = cls.__name__ + ".csv"
-
-        if not os.path.isfile(filename):
+        try:
+            with open(filename, "r", newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dicts = [dict([k, int(v)] for k, v in d.items())
+                              for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
             return []
-
-        list_objs = []
-        if cls.__name__ == "Rectangle":
-            header = ["id", "width", "height", "x", "y"]
-        elif cls.__name__ == "Square":
-            header = ["id", "size", "x", "y"]
-
-        with open(filename, mode="r") as file:
-            csv_file = csv.DictReader(file, fieldnames=header)
-
-            csv_file = [dict([k, int(v)] for k, v in d.items())
-                              for d in csv_file]
-
-            for row in csv_file:
-                list_objs.append(cls.create(**row))
-        return list_objs
