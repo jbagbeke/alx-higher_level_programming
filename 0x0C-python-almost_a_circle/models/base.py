@@ -116,13 +116,10 @@ class Base:
             header = ["id", "size", "x", "y"]
 
         with open(filename, mode="w", newline="") as file:
-            if list_objs is None or len(list_objs) == 0:
-                file.write("[]")
-            else:
-                csv_file = csv.DictWriter(file, fieldnames=header)
-                csv_file.writeheader()
-                for row in list_objs:
-                    csv_file.writerow(row.to_dictionary())
+            csv_file = csv.DictWriter(file, fieldnames=header)
+            csv_file.writeheader()
+            for row in list_objs:
+                csv_file.writerow(row.to_dictionary())
 
     @classmethod
     def load_from_file_csv(cls):
@@ -136,13 +133,14 @@ class Base:
             return []
 
         list_objs = []
-        list_ret = []
         if cls.__name__ == "Rectangle":
             header = ["id", "width", "height", "x", "y"]
         elif cls.__name__ == "Square":
             header = ["id", "size", "x", "y"]
+
         with open(filename, mode="r") as file:
             csv_file = csv.DictReader(file, fieldnames=header)
-            csv_file = [dict([key, int(v)] for key, v in d.items())
-                        for d in csv_file]
-            return [cls.create(**d) for d in csv_file]
+
+            for row in csv_file:
+                list_objs.append(cls.create(**row))
+        return list_objs
