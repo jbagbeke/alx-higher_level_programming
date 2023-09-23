@@ -137,8 +137,12 @@ class Base:
 
         list_objs = []
         list_ret = []
+        if cls.__name__ == "Rectangle":
+            header = ["id", "width", "height", "x", "y"]
+        elif cls.__name__ == "Square":
+            header = ["id", "size", "x", "y"]
         with open(filename, mode="r") as file:
-            csv_file = csv.DictReader(file)
+            csv_file = csv.DictReader(file, fieldnames=header)
             csv_file = [dict([key, int(v)] for key, v in d.items())
                         for d in csv_file]
             return [cls.create(**d) for d in csv_file]
