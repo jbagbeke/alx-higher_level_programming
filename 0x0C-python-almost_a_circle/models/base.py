@@ -139,11 +139,6 @@ class Base:
         list_ret = []
         with open(filename, mode="r") as file:
             csv_file = csv.DictReader(file)
-
-            for row in csv_file:
-                for key, val in row.items():
-                    list_objs.append(dict([key, int(val)]))
-            for objs in list_objs:
-                obj = cls.create(**objs)
-                list_ret.append(obj)
-        return list_ret
+            csv_file = [dict([key, int(v)] for key, v in d.items())
+                        for d in csv_file]
+            return [cls.create(**d) for d in csv_file]
