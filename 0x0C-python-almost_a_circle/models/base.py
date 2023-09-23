@@ -117,7 +117,6 @@ class Base:
 
         with open(filename, mode="w", newline="") as file:
             csv_file = csv.DictWriter(file, fieldnames=header)
-            csv_file.writeheader()
             for row in list_objs:
                 csv_file.writerow(row.to_dictionary())
 
