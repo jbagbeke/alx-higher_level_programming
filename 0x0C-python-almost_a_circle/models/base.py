@@ -140,6 +140,9 @@ class Base:
         with open(filename, mode="r") as file:
             csv_file = csv.DictReader(file, fieldnames=header)
 
+            csv_file = [dict([k, int(v)] for k, v in d.items())
+                              for d in csv_file]
+
             for row in csv_file:
                 list_objs.append(cls.create(**row))
         return list_objs
