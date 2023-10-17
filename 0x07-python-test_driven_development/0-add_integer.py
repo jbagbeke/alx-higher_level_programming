@@ -21,3 +21,6 @@ def add_integer(a, b=98):
     a = int(a)
     b = int(b)
     return (a + b)
+
+
+print(add_integer(2.3, -4.1))
