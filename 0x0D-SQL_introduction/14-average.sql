@@ -1,3 +1,4 @@
 -- Getting an average
-SELECT AVG(score) 'Average'
-FROM second_table;
+MySQL server.
+SELECT AVG(`score`) AS `average`
+FROM `second_table`;
