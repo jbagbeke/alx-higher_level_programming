@@ -1,2 +1,2 @@
---Deletes a MYSQL DATABASE
-DROP SCHEMA hbtn_0c_0;
+-- Deletes a MYSQL DATABASE
+DROP DATABASE IF EXISTS hbtn_0c_0;
