@@ -1,4 +1,4 @@
---Creating another table with insertion
+-- Creating another table with insertion
 CREATE TABLE second_table(
 	       id INT,
 	       name VARCHAR(256),
