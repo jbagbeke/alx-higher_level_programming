@@ -6,4 +6,5 @@ SELECT tv_genres.name AS name
 	ON tv_shows.id = tv_show_genres.show_id
 	AND tv_shows.title = 'Dexter'
 	JOIN tv_genres
-	ON tv_genres.id = tv_show_genres.genre_id;
+	ON tv_genres.id = tv_show_genres.genre_id
+	ORDER BY tv_genres.name ASC;
