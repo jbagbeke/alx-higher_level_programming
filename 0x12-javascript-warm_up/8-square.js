@@ -5,7 +5,7 @@ let index = 0;
 
 if (convertedNum) {
   while (index++ < convertedNum) {
-    console.log('x'.repeat(convertedNum));
+    console.log('X'.repeat(convertedNum));
   }
 } else {
   console.log('Missing size');
