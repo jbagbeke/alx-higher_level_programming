@@ -1,9 +1,5 @@
 #!/usr/bin/node
 
-let cLine = "C is fun";
-let pythonLine = "Python is cool";
-let jsLine = "Javascript is amazing";
+const allLine = 'C is fun\n' + 'Python is cool\n' + 'JavaScript is amazing';
 
-console.log(cLine);
-console.log(pythonLine);
-console.log(jsLine);
+console.log(allLine);
