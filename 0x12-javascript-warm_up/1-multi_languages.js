@@ -1,3 +1,9 @@
 #!/usr/bin/node
 
-console.log('C is fun\nPython is cool\nJavascript is amazing');
+let cLine = "C is fun";
+let pythonLine = "Python is cool";
+let jsLine = "Javascript is amazing";
+
+console.log(cLine);
+console.log(pythonLine);
+console.log(jsLine);
