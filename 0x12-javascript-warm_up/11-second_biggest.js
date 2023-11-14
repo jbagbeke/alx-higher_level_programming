@@ -9,7 +9,7 @@ let newArray = [];
 parsedArray = newCommands.map(arg => parseInt(arg));
 firstMax = Math.max.apply(null, parsedArray);
 
-if (parsedArray.length < 4) {
+if (parsedArray.length < 2) {
   console.log(0);
 } else {
   while (index < parsedArray.length) {
