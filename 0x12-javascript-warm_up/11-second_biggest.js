@@ -9,14 +9,18 @@ let newArray = [];
 parsedArray = newCommands.map(arg => parseInt(arg));
 firstMax = Math.max.apply(null, parsedArray);
 
-while (index < parsedArray.length) {
+if (parsedArray.length < 4) {
+  console.log(0);
+} else {
+  while (index < parsedArray.length) {
 
-  if (parsedArray[index] !== firstMax) {
-    newArray[index] = parsedArray[index];
+    if (parsedArray[index] !== firstMax) {
+      newArray[index] = parsedArray[index];
+    }
+
+    index++;
   }
 
-  index++;
+  newArray = newArray.filter(num => num !== undefined && num !== null);
+  console.log(Math.max.apply(null, newArray));
 }
-
-newArray = newArray.filter(num => num !== undefined && num !== null);
-console.log(Math.max.apply(null, newArray));
