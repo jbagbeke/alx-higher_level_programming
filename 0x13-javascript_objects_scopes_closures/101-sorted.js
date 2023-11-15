@@ -6,7 +6,6 @@ const newDict = {};
 const dictKey = [];
 const dictValue = [];
 
-
 Object.entries(dict).forEach(([key, value]) => {
   if (!dictKey.includes(value)) {
     dictKey.push(value);
@@ -23,7 +22,6 @@ while (idx < dictKey.length) {
   const currentList = [];
 
   while (index < dictValue.length) {
-
     if (dict[dictValue[index]] === firstKey) {
       currentList.push(dictValue[index]);
     }
