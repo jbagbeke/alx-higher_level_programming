@@ -3,7 +3,7 @@
 exports.esrever = function (list) {
   let idx = list.length;
   let idx2 = 0;
-  let newList = [];
+  const newList = [];
 
   while (--idx >= 0) {
     newList[idx2++] = list[idx];
