@@ -7,7 +7,7 @@ class SquareTwo extends Square {
     if (c) {
       let idx = 0;
       while (idx < this.height) {
-        console.log('c'.repeat(this.width));
+        console.log(c.repeat(this.width));
         idx++;
       }
     } else {
