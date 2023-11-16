@@ -1,3 +1,13 @@
 #!/usr/bin/node
-const add = require('./13-add').add;
-console.log(add(3, 5));
+
+function Counter() {
+  this.count = 0;
+
+  setInterval(() => {
+    this.count++;
+    console.log(this.count);
+  }, 1000);
+}
+
+const counter = new Counter();
+
