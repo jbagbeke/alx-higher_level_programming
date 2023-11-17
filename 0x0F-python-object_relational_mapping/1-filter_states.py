@@ -11,7 +11,9 @@ if __name__ == "__main__":
                                  passwd=sys.argv[2],
                                  db=sys.argv[3])
     cursor = db_connect.cursor()
-    cursor.execute("SELECT * FROM states WHERE TRIM(name) LIKE 'N%' ORDER BY states.id ASC")
+    cmd1 = "COLLATE utf8mb4_bin ORDER BY states.id ASC"
+    cmd = "SELECT * FROM states WHERE name LIKE 'N%' " + cmd1
+    cursor.execute(cmd)
 
     names = cursor.fetchall()
 
