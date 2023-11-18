@@ -11,8 +11,8 @@ if __name__ == '__main__':
                                      passwd=sys.argv[2],
                                      db=sys.argv[3])
         cursor = db_connect.cursor()
-        cmd = "SELECT cities.id, cities.name FROM cities JOIN states ON"
-        cmd1 = " cities.state_id = states.id ORDER BY cities.id ASC"
+        cmd = "SELECT cities.id, cities.name, states.name FROM cities JOIN "
+        cmd1 = "states ON cities.state_id = states.id ORDER BY cities.id ASC"
         cursor.execute(cmd + cmd1)
 
         results = cursor.fetchall()
