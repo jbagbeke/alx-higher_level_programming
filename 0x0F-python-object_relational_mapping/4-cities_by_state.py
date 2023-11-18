@@ -16,7 +16,7 @@ if __name__ == '__main__':
         results = cursor.fetchall()
 
         for result in results:
-            print(result)
+            print("{}".format(result))
 
         cursor.close()
         db_connect.close()
