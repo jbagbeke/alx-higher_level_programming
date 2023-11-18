@@ -18,10 +18,13 @@ if __name__ == '__main__':
 
     results = cursor.fetchall()
     
-    lth = len(results)
+    """lth = len(results)
     for result in results:
         print("{}".format(result[0]), end=', ' if lth > 1 else '\n')
-        lth -= 1
+        lth -= 1"""
+
+    result = ', '.join(item[0] for item in results)
+    print(result)
 
     cursor.close()
     db_connect.close()
