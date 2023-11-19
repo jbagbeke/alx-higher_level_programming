@@ -3,8 +3,6 @@
 """ Class definition of a State using SQLAlchemy """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine
-import sys
 
 Base = declarative_base()
 
