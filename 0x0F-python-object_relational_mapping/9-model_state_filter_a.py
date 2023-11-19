@@ -14,7 +14,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
 
     session_one = Session()
-    
+
     qfilter = State.name.like('%a%')
     results = session_one.query(State).filter(qfilter).order_by(State.id)
 
