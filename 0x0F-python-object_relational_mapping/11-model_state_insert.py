@@ -13,7 +13,7 @@ if __name__ == '__main__':
                                                           sys.argv[3])
     engine = create_engine(db_connect)
     session1 = Session(engine)
-    new_obj = State(name = 'Louisiana')
+    new_obj = State(name='Louisiana')
 
     session1.add(new_obj)
     session1.commit()
