@@ -16,9 +16,10 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     sec_session = Session()
 
-    first_one = sec_session.query(State).first()
-
-    for first in first_one:
+    if (sec_session.query(State).count() != 0):
+        first = sec_session.query(State).first()
         print("{}: {}".format(first.id, first.name))
+    esle:
+        print('Nothing')
 
     sec_session.close()
