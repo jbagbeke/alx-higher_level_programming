@@ -18,9 +18,7 @@ if __name__ == '__main__':
 
     first_one = sec_session.query(State).first()
 
-    if (not first_one):
-        print ('')
-    else:
-        print("{}: {}".format(first_one.id, first_one.name))
+    for first in first_one:
+        print("{}: {}".format(first.id, first.name))
 
     sec_session.close()
