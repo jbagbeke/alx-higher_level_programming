@@ -19,7 +19,7 @@ if __name__ == '__main__':
     if (sec_session.query(State).count() != 0):
         first = sec_session.query(State).first()
         print("{}: {}".format(first.id, first.name))
-    esle:
+    else:
         print('Nothing')
 
     sec_session.close()
