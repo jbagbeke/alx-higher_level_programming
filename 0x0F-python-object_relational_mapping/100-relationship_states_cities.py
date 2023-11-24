@@ -14,6 +14,8 @@ if __name__ == '__main__':
     engine = create_engine(db_connect)
     session = Session(engine)
 
+    Base.metadata.create_all(engine)
+
     try:
         new_city = City(name='San Francisco')
         new_state = State(name='California', cities=[new_city])
