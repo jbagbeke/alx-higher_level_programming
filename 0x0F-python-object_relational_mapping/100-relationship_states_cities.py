@@ -16,13 +16,10 @@ if __name__ == '__main__':
 
     Base.metadata.create_all(engine)
 
-    try:
-        new_city = City(name='San Francisco')
-        new_state = State(name='California', cities=[new_city])
+    new_city = City(name='San Francisco')
+    new_state = State(name='California', cities=[new_city])
 
-        session.add(new_state)
-        session.commit()
-    except exc.ProgrammingError:
-        pass
-    finally:
-        session.close()
+    session.add(new_state)
+    session.commit()
+    
+    session.close()
