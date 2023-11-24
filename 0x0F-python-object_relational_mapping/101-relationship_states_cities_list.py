@@ -20,9 +20,8 @@ if __name__ == '__main__':
                                   ).order_by(State.id, City.id).all()
 
     for result in states_result:
-        print("{}: {}".format(result.State.id, result.State.name))
-
-        for city in result.State.cities:
-            print("\t{}: {}".format(city.id, city.name))
+        state  = result.State
+        city = result.City
+        print("{}: {}\n\t{}: {}".format(state.id, state.name, city.id, city.name))
 
     session.close()
