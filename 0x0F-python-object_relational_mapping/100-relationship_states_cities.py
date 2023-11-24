@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
         session.add(new_state)
         session.commit()
-    except exc.OperationalError:
-        pass
+    except exc.OperationalError as e:
+        print(e)
     finally:
         session.close()
