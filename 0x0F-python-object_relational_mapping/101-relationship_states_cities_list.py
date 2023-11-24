@@ -22,11 +22,7 @@ if __name__ == '__main__':
     for result in states_result:
         print("{}: {}".format(result.State.id, result.State.name))
 
-        state_city = result.State.cities
-
-        for city in state_city:
+        for city in result.State.cities:
             print("\t{}: {}".format(city.id, city.name))
-
-        print('')
 
     session.close()
