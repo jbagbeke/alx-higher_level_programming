@@ -14,10 +14,13 @@ if __name__ == '__main__':
     engine = create_engine(db_connect)
     session = Session(engine)
 
-    new_city = City(name='San Francisco')
-    new_state = State(name='California', cities=[new_city])
+    try:
+        new_city = City(name='San Francisco')
+        new_state = State(name='California', cities=[new_city])
 
-    session.add(new_state)
-
-    session.commit()
-    session.close()
+        session.add(new_state)
+        session.commit()
+    except exc.OperationalError:
+        pass
+    finally:
+        session.close()
