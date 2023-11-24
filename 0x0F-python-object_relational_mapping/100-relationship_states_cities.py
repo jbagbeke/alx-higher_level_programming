@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """ Creates State and City from database """
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, exc
 from sqlalchemy.orm import Session, relationship
 from relationship_city import City
 from relationship_state import Base, State
@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
         session.add(new_state)
         session.commit()
-    except exc.OperationalError as e:
-        print(e)
+    except exc.ProgrammingError:
+        pass
     finally:
         session.close()
