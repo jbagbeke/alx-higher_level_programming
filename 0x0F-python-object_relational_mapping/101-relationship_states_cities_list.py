@@ -4,7 +4,7 @@
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from relationship_city import City
-from relationship_state import State
+from relationship_state import Base, State
 import sys
 
 if __name__ == '__main__':
@@ -13,10 +13,12 @@ if __name__ == '__main__':
                                                           sys.argv[3])
     engine = create_engine(db_connect)
     Session = sessionmaker(bind=engine)
+
+    Base.metadata.create_all(engine)
+
     session = Session()
-
     states_result = session.query(State).order_by(State.id).all()
-
+    
     for result in states_result:
         print("{}: {}".format(result.id, result.name))
 
