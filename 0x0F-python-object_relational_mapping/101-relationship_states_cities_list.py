@@ -20,7 +20,7 @@ if __name__ == '__main__':
     
     for result in session.query(State).order_by(State.id).all():
         print("{}: {}".format(result.id, result.name))
-
+        
         for city in result.cities:
             print("\t{}: {}".format(city.id, city.name))
 
