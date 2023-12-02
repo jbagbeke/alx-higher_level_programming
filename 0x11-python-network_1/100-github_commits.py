@@ -15,5 +15,5 @@ if __name__ == '__main__':
     for commit in http_json:
         if (index < 10):
             print("{}: {}".format(commit.get('sha'),
-                                commit['commit']['author']['name']))
+                                  commit['commit']['author']['name']))
         index += 1
