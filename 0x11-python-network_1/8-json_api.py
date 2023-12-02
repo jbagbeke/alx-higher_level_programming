@@ -11,13 +11,13 @@ if __name__ == '__main__':
 
     let = {'q': q}
     http_res = requests.post('http://0.0.0.0:5000/search_user', data=let)
-    content = http_res.headers.get('Content-Type', "").lower()
-
-    if "application/json" in content:
+    
+    try:
         http_json = http_res.json()
 
-        print('[{}] {}'.format(http_json['id'], http_json['name']))
-    if len(content) == 0:
-        print('No result')
-    else:
+        if not http_json:
+            print('No result')
+        else:
+            print('[{}] {}'.format(http_json['id'], http_json['name']))
+    except:
         print('Not a valid JSON')
