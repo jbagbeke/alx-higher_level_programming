@@ -7,6 +7,7 @@ if __name__ == '__main__':
     try:
         http_res = requests.get(sys.argv[1])
         http_res.raise_for_status()
-    except requests.exceptions.HTTPError as err:
-        if err.response.status_code >= 400:
-            print('Error code: {}'.format(err.response.status_code))
+        print(http_res.text)
+    except requests.exceptions.HTTPError:
+        if http_res.status_code >= 400:
+            print('Error code: {}'.format(http_res.status_code))
