@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     let = {'q': q}
     http_res = requests.post('http://0.0.0.0:5000/search_user', data=let)
-    
+
     try:
         http_json = http_res.json()
 
@@ -19,5 +19,5 @@ if __name__ == '__main__':
             print('No result')
         else:
             print('[{}] {}'.format(http_json['id'], http_json['name']))
-    except:
+    except Exception:
         print('Not a valid JSON')
