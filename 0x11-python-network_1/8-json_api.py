@@ -16,7 +16,7 @@ if __name__ == '__main__':
     if "application/json" in content:
         http_json = http_res.json()
 
-        print('{} {}'.format(http_json['id'], http_json['name']))
+        print('[{}] {}'.format(http_json['id'], http_json['name']))
     if len(content) == 0:
         print('No result')
     else:
