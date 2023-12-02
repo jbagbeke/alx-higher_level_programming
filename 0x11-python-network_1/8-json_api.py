@@ -16,7 +16,7 @@ if __name__ == '__main__':
         http_json = http_res.json()
 
         print('{} {}'.format(http_json['id'], http_json['name']))
-    else if len(content) == 0:
+    if len(content) == 0:
         print('No result')
     else:
         print('Not a valid JSON')
