@@ -9,7 +9,8 @@ if __name__ == '__main__':
     else:
         q = sys.argv[1]
 
-    http_res = requests.post('http://0.0.0.0:5000/search_user', data=q)
+    let = {'q': q}
+    http_res = requests.post('http://0.0.0.0:5000/search_user', data=let)
     content = http_res.headers.get('Content-Type', "").lower()
 
     if "application/json" in content:
