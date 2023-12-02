@@ -6,4 +6,5 @@ import sys
 if __name__ == '__main__':
     http_res = requests.get(sys.argv[1])
 
-    print(http_res.headers['X-Request-Id'])
+    if http_res.status_code == 200:
+        print(http_res.headers['X-Request-Id'])
