@@ -5,7 +5,7 @@ import sys
 
 if __name__ == '__main__':
     email = sys.argv[2]
-    http_res = requests.post(sys.argv[1], data=email)
+    http_res = requests.post(sys.argv[1], data=email.encode('utf-8'))
 
     if http_res:
         print(http_res.text())
