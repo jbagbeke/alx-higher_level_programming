@@ -13,6 +13,9 @@ def find_peak(list_of_integers):
         if idx - 1 < 0 and idx + 1 < llen:
             if list_int[idx] >= list_int[idx + 1]:
                 peak_list.append(list_int[idx])
+        if idx - 1 > 0 and idx + 1 >= llen:
+            if list_int[idx] >= list_int[idx - 1]:
+                peak_list.append(list_int[idx])
         if idx - 1 > 0 and idx + 1 < llen:
             num = list_int[idx]
             if num >= list_int[idx - 1] and num >= list_int[idx + 1]:
@@ -21,3 +24,7 @@ def find_peak(list_of_integers):
 
     if peak_list:
         return max(peak_list)
+
+
+
+print(find_peak([1, 2, 3, 4, 5]))
