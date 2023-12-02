@@ -7,4 +7,4 @@ if __name__ == '__main__':
     http_res = requests.get(sys.argv[1])
 
     if http_res.status_code == 200:
-        print(http_res.headers['X-Request-Id'])
+        print(http_res.headers.get('X-Request-Id'))
