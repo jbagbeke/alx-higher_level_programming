@@ -9,18 +9,8 @@ if __name__ == '__main__':
 
     http_res = requests.get(git_url)
 
-    try:
-        http_json = http_res.json()
+    http_json = http_res.json()
 
-        http_res.raise_for_status()
-
-        if not http_json:
-            print(None)
-
-        for commit in http_json:
-            print("{}: {}".format(commit.get('sha'),
-                                  commit['commit']['author']['name']))
-    except requests.exceptions.HTTPError as e:
-        print(None)
-    except requests.exceptions.RequestException as e:
-        print(None)
+    for commit in http_json:
+        print("{}: {}".format(commit.get('sha'),
+                              commit['commit']['author']['name']))
