@@ -8,4 +8,4 @@ if __name__ == '__main__':
     http_res = requests.post(sys.argv[1], data=email)
 
     if http_res.status_code == 200:
-        print(http_res.text())
+        print(http_res.text)
