@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
         for commit in http_json:
             print("{}: {}".format(commit.get('sha'),
-                                  commit.get('commit')['author']['name']))
+                                  commit['commit']['author']['name']))
     except requests.exceptions.HTTPError as e:
         print(None)
     except requests.exceptions.RequestException as e:
