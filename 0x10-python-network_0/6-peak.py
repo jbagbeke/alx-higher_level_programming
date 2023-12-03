@@ -24,7 +24,3 @@ def find_peak(list_of_integers):
 
     if peak_list:
         return max(peak_list)
-
-
-
-print(find_peak([1, 2, 3, 4, 5]))
