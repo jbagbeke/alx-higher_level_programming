@@ -3,7 +3,7 @@
 const sysArgs = process.argv;
 const request = require('request');
 
-request(sysArgs[2], (err, response, body) => {
+request.get(sysArgs[2], (err, response, body) => {
   if (err) {
     console.log(err);
   } else {
