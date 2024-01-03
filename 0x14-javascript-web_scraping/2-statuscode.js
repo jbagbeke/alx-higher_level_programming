@@ -3,10 +3,10 @@
 const sysArgs = process.argv;
 const request = require('request');
 
-request(sysArgs[2], (err, res, data) => {
+request(sysArgs[2], (err, response, body) => {
   if (err) {
     console.log(err);
   } else {
-    console.log('code: ', res.statusCode);
+    console.log('code: ', response.statusCode);
   }
 });
