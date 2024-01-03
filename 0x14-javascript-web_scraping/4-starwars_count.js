@@ -9,16 +9,16 @@ request(String(sysArgs[2]), (err, response, body) => {
   } else {
     const peopleChar = JSON.parse(body).results;
     let wedge = 0;
-    const wedgeId = 'https://swapi-api.alx-tools.com/api/people/18/';
+    const wedgeId = '18';
 
-    if (response.statusCode === 200) {
-      for (let i = 0; i < peopleChar.length; i++) {
-        if (peopleChar[i].characters.includes(wedgeId)) {
+    peopleChar.forEach((fdict) => {
+      fdict.characters.forEach((char) => {
+        if (char.includes(wedgeId)) {
           wedge++;
         }
-      }
+      });
+    });
 
-      console.log(wedge);
-    }
+    console.log(wedge);
   }
 });
