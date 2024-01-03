@@ -11,13 +11,14 @@ request(String(sysArgs[2]), (err, response, body) => {
     let wedge = 0;
     const wedgeId = 'https://swapi-api.alx-tools.com/api/people/18/';
 
-    for (let i = 0; i < peopleChar.length; i++) {
-      console.log(i);
-      if (peopleChar[i].characters.includes(wedgeId)) {
-        wedge++;
+    if (response.statusCode === 200) {
+      for (let i = 0; i < peopleChar.length; i++) {
+        if (peopleChar[i].characters.includes(wedgeId)) {
+          wedge++;
+        }
       }
-    }
 
-    console.log(wedge);
+      console.log(wedge);
+    }
   }
 });
